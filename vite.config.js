@@ -24,6 +24,8 @@ export default defineConfig({
       "@": path.resolve("./src"),
       "@components": path.resolve("./src/components"),
       "@tasks": path.resolve("./src/tasks"),
+      "@ui": path.resolve("./src/ui"),
+      "@lib": path.resolve("./src/lib"),
     },
   },
   server: {
