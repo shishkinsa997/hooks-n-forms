@@ -3,8 +3,8 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
-export default defineConfig({
-  base: "/hooks-n-forms/",
+export default defineConfig(({ mode }) => ({
+  base: mode === 'production' ? "/" : "/hooks-n-forms/",
   plugins: [react(), tailwindcss()],
   build: {
     outDir: "build",
@@ -38,4 +38,4 @@ export default defineConfig({
     port: 8080,
     open: true,
   },
-});
+}));
